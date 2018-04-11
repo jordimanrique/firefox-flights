@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Atrapalo Flights",
+  "description": "Atrapalo Flights",
+  "version": "0.4.0",
+  "icons": {
+    "128" : "icons/aeroplane_128.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/aeroplane_128.png",
+    "default_popup": "html/popup.html"
+  },
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/vuelos/resultados_ajax/*"],
+      "js": ["js/lib/jquery.js", "js/lib/jquery.colorbox-min.js", "js/contentScript.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "*://*/apitransport/*",
+    "storage",
+    "notifications"
+  ]
+}

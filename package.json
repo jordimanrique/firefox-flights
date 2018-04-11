@@ -1,0 +1,30 @@
+{
+  "name": "firefox-flights",
+  "version": "0.1.0",
+  "description": "Atrapalo Flights firefox extension",
+  "main": "background.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build": "webpack",
+    "build:watch": "webpack --progress --colors --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmboloix/firefox-flights.git"
+  },
+  "keywords": [
+    "Firefox",
+    "Extension"
+  ],
+  "author": "dt_vuelos@atrapalo.com",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "jest": "^21.2.1",
+    "webpack": "^3.7.1"
+  }
+}
