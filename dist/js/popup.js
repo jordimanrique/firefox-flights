@@ -88,22 +88,19 @@ storage.get(['results', 'showInfoActive', 'infoShown']).then(function (items) {
 });
 
 browser.storage.onChanged.addListener(function (changes) {
+  if (changes.showInfoActive) {
+    infoActive = changes.showInfoActive.newValue;
+  }
 
-  // TODO
+  if (changes.results) {
+    var data = changes.results.newValue.data;
+    window.data = changes.results.newValue;
+    renderView(data, infoActive);
+  }
 
-  // if (changes.showInfoActive) {
-  //   infoActive = changes.showInfoActive.newValue;
-  // }
-  //
-  // if (changes.results) {
-  //   const data = changes.results.newValue.data;
-  //   window.data = changes.results.newValue;
-  //   renderView(data, infoActive);
-  // }
-  //
-  // if (changes.infoShown) {
-  //   infoShown = changes.infoShown.newValue;
-  // }
+  if (changes.infoShown) {
+    infoShown = changes.infoShown.newValue;
+  }
 });
 
 /*
