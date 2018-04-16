@@ -17,7 +17,8 @@ storage.get(['results', 'showInfoActive', 'infoShown']).then((items) => {
 
 browser.storage.onChanged.addListener((changes) => {
 
-  debugger;
+  // TODO
+
   // if (changes.showInfoActive) {
   //   infoActive = changes.showInfoActive.newValue;
   // }
@@ -267,15 +268,12 @@ function changeToSuccessAllProviders() {
 }
 
 function sendMessage(message) {
-
-  alert('send message!!');
-
-  // chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
-  //   let lastTabId = tabs[0].id;
-  //   if (lastTabId) {
-  //     chrome.tabs.sendMessage(lastTabId, message);
-  //   }
-  // });
+  browser.tabs.query({active: true, currentWindow: true}).then((tabs) => {
+    let lastTabId = tabs[0].id;
+    if (lastTabId) {
+      browser.tabs.sendMessage(lastTabId, message);
+    }
+  });
 }
 
 function generateStatusBoxTable(status) {

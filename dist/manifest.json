@@ -25,5 +25,35 @@
     "*://*/apitransport/*",
     "storage",
     "notifications"
-  ]
+  ],
+  "commands": {
+    "show-all": {
+      "suggested_key": {
+        "default": "Alt+Shift+0",
+        "linux": "Alt+Shift+0"
+      },
+      "description": "Show packages and transports"
+    },
+    "toggle-info": {
+      "suggested_key": {
+        "default": "Alt+Shift+1",
+        "linux": "Alt+Shift+1"
+      },
+      "description": "Show or hide transports and packages info"
+    },
+    "only-transports": {
+      "suggested_key": {
+        "default": "Alt+Shift+2",
+        "linux": "Alt+Shift+2"
+      },
+      "description": "Show only transports"
+    },
+    "only-packages": {
+      "suggested_key": {
+        "default": "Alt+Shift+3",
+        "linux": "Alt+Shift+3"
+      },
+      "description": "Show only packages"
+    }
+  }
 }
