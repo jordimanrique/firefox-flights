@@ -1,5 +1,13 @@
 # firefox-flights
 
+## Update the app
+
+Execute in the command line 
+
+    `make run`
+    
+And it will ask for you the command 
+
 ## Development
 
 Initialize project
