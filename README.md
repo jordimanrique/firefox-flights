@@ -1,5 +1,13 @@
 # firefox-flights
 
+## Update de plugin
+
+Execute in the command line
+
+    make run
+    
+And it will ask for you the command to run   
+
 ## Development
 
 Initialize project

@@ -1,0 +1,10 @@
+version: '3'
+services:
+  node:
+    image: gitlab.atrapalo.com:5005/docker/node:12-latest
+    networks:
+      - default
+    volumes:
+      - ./node_modules:/home/node/app/node_modules
+      - .:/home/node/app/
+    working_dir: /home/node/app
